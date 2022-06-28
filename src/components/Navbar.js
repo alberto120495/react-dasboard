@@ -61,11 +61,12 @@ function Navbar() {
     }
   }, [screenSize]);
 
+  const handleActiveMenu = () => setActiveMenu(!activeMenu);
   return (
     <div className="flex justify-between p-2 md:mx-6 relative">
       <NavButton
         title="Menu"
-        customFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
+        customFunc={handleActiveMenu}
         color={currentColor}
         icon={<AiOutlineMenu />}
       />
@@ -106,10 +107,10 @@ function Navbar() {
             <MdKeyboardArrowDown className="text-gray-400  text-14" />
           </div>
         </TooltipComponent>
-        {isClicked.cart && <Cart />}
-        {isClicked.chat && <Chat />}
-        {isClicked.notification && <Notification />}
-        {isClicked.userProfile && <UserProfile />}
+        {isClicked?.cart && <Cart />}
+        {isClicked?.chat && <Chat />}
+        {isClicked?.notification && <Notification />}
+        {isClicked?.userProfile && <UserProfile />}
       </div>
     </div>
   );
