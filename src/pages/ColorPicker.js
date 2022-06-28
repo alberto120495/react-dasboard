@@ -9,7 +9,7 @@ const change = (args) => {
 
 function ColorPicker() {
   return (
-    <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-wuite rounded-3xl">
+    <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl">
       <Header category="App" title="Color Picker" />
       <div className="text-center">
         <div id="preview" />
@@ -34,7 +34,7 @@ function ColorPicker() {
               inline
               showButtons={false}
               change={change}
-             />
+            />
           </div>
         </div>
       </div>
