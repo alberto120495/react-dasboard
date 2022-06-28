@@ -49,6 +49,8 @@ function ContextProvider({ children }) {
         setScreenSize,
         currentMode,
         currentColor,
+        setCurrentColor,
+        setCurrentMode,
         setColor,
         setMode,
         setThemeSettings,

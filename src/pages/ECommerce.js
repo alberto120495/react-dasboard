@@ -10,7 +10,7 @@ import {
 } from "../data/dummy";
 
 function ECommerce() {
-  const { currentColor } = useStateContext();
+  const { currentColor, currentMode } = useStateContext();
   return (
     <div className="mt-12">
       <div className="flex flex-wrap lg:flex-nowrap justify-center ">
@@ -24,6 +24,13 @@ function ECommerce() {
               <p className="font-bold text-gray-400">Earnings</p>
               <p className="text-2xl">$63,448.78</p>
             </div>
+            <button
+              type="button"
+              style={{ backgroundColor: currentColor }}
+              className="text-2xl opacity-0.9 text-white hover:drop-shadow-xl rounded-full  p-4"
+            >
+              <BsCurrencyDollar />
+            </button>
           </div>
           <div className="mt-6">
             <Button
@@ -117,7 +124,7 @@ function ECommerce() {
               </div>
             </div>
             <div>
-              <Stacked width="320px" height="360px" />
+              <Stacked currentMode={currentMode} width="320px" height="360px" />
             </div>
           </div>
         </div>
